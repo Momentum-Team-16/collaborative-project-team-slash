@@ -6,16 +6,29 @@
 }
 
 .card-cover {
+  background-color:rgb(2, 50, 101);
+  color: white; 
   border: 2px solid black; 
   margin: 40px; 
   padding: 20px; 
   align-items: center; 
-  height: 400px; 
+  height: 500px; 
   width: 300px; 
 }
 
+.pics {
+  height: 180px; 
+  width: 250px; 
+  margin: 20px; 
+}
+
 body {
-  background-color: red; 
+  background-color: rgb(224, 78, 78); 
+}
+
+.time {
+  font-size: 16px; 
+  color: rgb(2, 50, 101)
 }
 
 h1 {
@@ -26,5 +39,5 @@ h1 {
 h2 {
   text-align: center; 
   text-decoration-line: underline;
-  color: rgb(16, 65, 16);
+  color: rgb(133, 212, 133);
 }

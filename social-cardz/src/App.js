@@ -15,6 +15,8 @@ const App = ({ card }) => {
           <p>{card.shortDescription}</p>
           <br/>  
           <p>{card.date}</p>
+          <br /> 
+          <img src={card.image} className="pics" alt="picz" /> 
         </div> 
       ))}
     </div>
