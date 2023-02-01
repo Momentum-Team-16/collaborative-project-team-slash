@@ -7,7 +7,7 @@ const App = ({ card }) => {
   <>
   <p className="time">Date: {moment().format('MMMM Do YYYY, h:mm:ss a')}</p>
     <h1>Social Cardz</h1>
-    <div className="bob">
+    <div className="card-stack">
       {card.map((card) => (
         <div className="card-cover">
           <h2>{card.title}</h2>
