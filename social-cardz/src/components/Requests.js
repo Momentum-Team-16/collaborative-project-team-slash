@@ -1,7 +1,8 @@
 import axios from "axios";
+import data from './card.json'; 
 
 export const RequestCards = () => {
-    const url = "https://socialcards.com/cards/"
+    const cards = " "
 
     const response = axios.get(url,{
         headers: {Authorization: "" }

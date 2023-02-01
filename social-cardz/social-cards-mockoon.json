@@ -162,6 +162,7 @@
       "enabled": true,
       "responseMode": null
     },
+
     {
       "uuid": "892c2d91-b4f9-45d0-9f55-f363a3c3fccb",
       "documentation": "Get a list of cards from my friends",
@@ -190,6 +191,8 @@
           "databucketID": "",
           "bodyType": "INLINE"
         },
+
+        
         {
           "uuid": "14f543b0-cb64-4b8c-9b64-a9ebff469824",
           "body": "{\n    \"count\": 10,\n    \"results\": [\n        {{#repeat 10}}\n        {\n            \"id\": {{@index}},\n            \"author\": {\n                \"id\": {{ int 2 20 }},\n                \"username\": \"{{ lowercase (firstName) }}\"\n            },\n            \"url\": \"http://localhost:3000/api/cards/{{@index}}/\",\n            \"color\": \"{{ oneOf (array 'blue' 'yellow' 'eggshell' 'purple') }}\",\n            \"font\": \"{{ oneOf (array 'Raleway' 'Pangolin' 'Yellowtail' 'Merriweather') }}\",\n            \"border\": \"{{ oneOf (array 'links' 'solid' 'dashed' 'none') }}\",\n            \"message\": \"{{lorem 20}}\",\n            \"posted_at\": \"{{ date '2019' '2020' 'YYYY-MM-DDTHH:mm:ss-05:00' }}\"\n        }\n        {{/repeat}}\n    ]\n}\n",
