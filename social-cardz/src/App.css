@@ -1,12 +1,30 @@
+.bob {
+  display: flex; 
+  flex-direction: row; 
+  align-items: center; 
+  justify-content: center; 
+}
 
 .card-cover {
   border: 2px solid black; 
+  margin: 40px; 
+  padding: 20px; 
+  align-items: center; 
+  height: 400px; 
+  width: 300px; 
 }
 
 body {
   background-color: red; 
 }
 
+h1 {
+  text-align: center;
+  color: blue; 
+}
+
 h2 {
-  color: white; 
+  text-align: center; 
+  text-decoration-line: underline;
+  color: rgb(16, 65, 16);
 }
