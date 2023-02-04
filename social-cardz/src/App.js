@@ -3,26 +3,41 @@ import { React, useState } from 'react';
 import moment from 'moment'; 
 import useLocalStorageState from 'use-local-storage-state'; 
 import { NavBar } from './components/NavBar';
+import { GoLogin } from './components/Login'; 
+import { AllCardz } from './components/AllCards'; 
+import { MyCardz } from './components/MyCards'; 
+import { Routes, Route } from 'react-router-dom'; 
 
-const App = ({ card }) => {
+function App() {
+  const [token, setToken] = useLocalStorageState("token", null)
+  const [username, setUsername] = useLocalStorageState("username", '') 
+
+  const setGoLogin = (token, username) => {
+    setToken(token)
+    setUsername(username)
+  }
+
+  const loggedIn = token 
+
   return (
   <>
   <p className="time">Date: {moment().format('MMMM Do YYYY, h:mm:ss a')}</p>
-    <h1>Social Cardz</h1>
-    <NavBar />
-    <div className="card-stack">
-      {card.map((card) => (
-        <div className="card-cover">
-          <h2>{card.title}</h2>
-          <h3>{card.author}</h3>
-          <p>{card.shortDescription}</p>
-          <br/>  
-          <p>{card.date}</p>
-          <br /> 
-          <img src={card.image} className="pics" alt="picz" /> 
-        </div> 
-      ))}
-    </div>
+    <h1>Sugar Maple Social</h1>
+
+    {loggedIn ? (
+       <div className="nav"> 
+       <NavBar token={token} setGoLogin={setGoLogin} username={username} />
+       <Routes>
+         <Route path="/AllCards" element={<AllCardz/>} /> 
+         <Route path="/MyCards" element={<MyCardz />} />
+         <Route path="/Login" element={<GoLogin />} /> 
+       </Routes>
+       </div> 
+    ) : (
+      <div> 
+        <GoLogin 
+        setGoLogin={setGoLogin} /> 
+      </div>)}
   </> 
   );
 }

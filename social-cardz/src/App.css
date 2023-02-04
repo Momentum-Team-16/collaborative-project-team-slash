@@ -38,8 +38,7 @@ h1 {
 
 h2 {
   text-align: center; 
-  text-decoration-line: underline;
-  color: rgb(133, 212, 133);
+  color: rgb(53, 88, 116);
 }
 .nav-bar {
   display: flex;
