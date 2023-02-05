@@ -1,15 +1,15 @@
-import { MyCards } from './Requests'; 
+import { requestMyCards } from './Requests'; 
 import { useEffect, useState } from 'react'; 
 
 
 export const MyCardz = ({token}) => {
     const [mine, setMine] = useState([])
     useEffect(() => {
-        MyCards(token)
+        requestMyCards(token)
         .then(res => setMine(res.data))
     }, [token])
 
     return (
-        <h2>Property Maples</h2>
+        <h2>Domestic Maples</h2>
     )
 };

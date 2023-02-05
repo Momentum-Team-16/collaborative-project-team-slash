@@ -3,8 +3,10 @@ import { React, useState } from 'react';
 import moment from 'moment'; 
 import useLocalStorageState from 'use-local-storage-state'; 
 import { NavBar } from './components/NavBar';
-import { GoLogin } from './components/Login'; 
+import { Login } from './components/Login'; 
+import { Friends } from './components/Friends'; 
 import { AllCardz } from './components/AllCards'; 
+import { CreateCard } from './components/CreateCard'; 
 import { MyCardz } from './components/MyCards'; 
 import { Routes, Route } from 'react-router-dom'; 
 
@@ -12,7 +14,7 @@ function App() {
   const [token, setToken] = useLocalStorageState("token", null)
   const [username, setUsername] = useLocalStorageState("username", '') 
 
-  const setGoLogin = (token, username) => {
+  const setLogin = (token, username) => {
     setToken(token)
     setUsername(username)
   }
@@ -26,17 +28,19 @@ function App() {
 
     {loggedIn ? (
        <div className="nav"> 
-       <NavBar token={token} setGoLogin={setGoLogin} username={username} />
+       <NavBar token={token} setLogin={setLogin} username={username} />
        <Routes>
          <Route path="/AllCards" element={<AllCardz/>} /> 
          <Route path="/MyCards" element={<MyCardz />} />
-         <Route path="/Login" element={<GoLogin />} /> 
+         <Route path="/Friends" element={<Friends />} /> 
+         <Route path="/CreateCard" element={<CreateCard />} /> 
+         <Route path="/Login" element={<Login />} /> 
        </Routes>
        </div> 
     ) : (
       <div> 
-        <GoLogin 
-        setGoLogin={setGoLogin} /> 
+        <Login 
+        setLogin={setLogin} /> 
       </div>)}
   </> 
   );

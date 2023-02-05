@@ -1,11 +1,11 @@
-import { AllCards } from './Requests'; 
+import { requestAllCards } from './Requests'; 
 import { useEffect, useState } from 'react'; 
 
 
 export const AllCardz = ({token}) => {
     const [card, setCard] = useState([])
     useEffect(() => {
-        AllCards(token)
+        requestAllCards(token)
         .then(res => setCard(res.data))
     }, [token])
 

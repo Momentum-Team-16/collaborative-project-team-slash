@@ -1,19 +1,19 @@
 import axios from 'axios'; 
 import { useNavigate } from 'react-router-dom'; 
 import { useState } from 'react'; 
-import { Login } from './Requests'; 
+import { requestLogin } from './Requests'; 
 
-export const GoLogin = ({ goSetLogin }) => {
+export const Login = ({ setLogin }) => {
     const [username, setUsername] = useState('') 
     const [password, setPassword] = useState('') 
     const navigate = useNavigate('') 
 
     const handleSubmit = (event) => {
         event.preventDefault() 
-        Login(username, password)
+        requestLogin(username, password)
         .then((res) => {
             const token = res.data.auth_token
-            goSetLogin(token, username) 
+            setLogin(token, username) 
             navigate("/MyCards")
         })
     }
