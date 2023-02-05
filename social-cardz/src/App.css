@@ -23,7 +23,7 @@
 }
 
 body {
-  background-color: rgb(224, 78, 78); 
+  background-color: #bf0505
 }
 
 .time {
@@ -33,13 +33,12 @@ body {
 
 h1 {
   text-align: center;
-  color: blue; 
+  color: #d7d80d
 }
 
 h2 {
   text-align: center; 
-  text-decoration-line: underline;
-  color: rgb(133, 212, 133);
+  color: #d4a206
 }
 .nav-bar {
   display: flex;

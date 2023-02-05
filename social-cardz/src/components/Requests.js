@@ -1,10 +1,29 @@
 import axios from "axios";
 
-export const RequestCards = () => {
-    const url = "https://socialcards.com/cards/"
+export const requestLogin = (username, password) => {
+    const url = 'https://social-cards-wg2j.onrender.com/auth/token/login' 
 
-    const response = axios.get(url,{
-        headers: {Authorization: "" }
-    }).then(res => console.log(res)) 
-
+    const response = axios.post(url, {
+        username: username, 
+        password: password})
+    return response 
 }
+
+export const requestAllCards = (token) => {
+    const url = 'https://social-cards-wg2j.onrender.com/cards/' 
+
+    const response = axios.get(url, {
+        Header: {Authorization: `Token ${token}`}
+    })
+    return response 
+}
+
+export const requestMyCards = (token) => {
+    const url = 'https://social-cards-wg2j.onrender.com/cards/me' 
+
+    const response = axios.get(url, {
+        Header: {Authorization: `Token ${token}`}
+    })
+    return response 
+}
+
