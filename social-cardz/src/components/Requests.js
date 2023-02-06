@@ -13,17 +13,27 @@ export const requestAllCards = (token) => {
     const url = 'https://social-cards-wg2j.onrender.com/cards/' 
 
     const response = axios.get(url, {
-        Header: {Authorization: `Token ${token}`}
+        headers: {Authorization: `token ${token}`}
     })
     return response 
 }
 
-export const requestMyCards = (token) => {
-    const url = 'https://social-cards-wg2j.onrender.com/cards/me' 
+// export const requestACard = (token, cardId) => {
+//     const url = 'https://social-cards-wg2j.onrender.com/cards/${cardId}'
 
-    const response = axios.get(url, {
-        Header: {Authorization: `Token ${token}`}
-    })
-    return response 
-}
+//         const response = axios.get(url,
+//     { headers: { Authorization: `token ${token}`}
+//     })
+//     return response
+// } 
+
+// export const requestMyCards = (token) => {
+//     const url = 'https://social-cards-wg2j.onrender.com/cards/me' 
+
+//     const response = axios.get(url, {
+//         headers: {Authorization: `token ${token}`}
+//     })
+//     return response 
+// }
+
 

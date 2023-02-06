@@ -27,16 +27,16 @@ function App() {
     <h1>Sugar Maple Social</h1>
 
     {loggedIn ? (
-       <div className="nav"> 
-       <NavBar token={token} setLogin={setLogin} username={username} />
-       <Routes>
-         <Route path="/AllCards" element={<AllCardz/>} /> 
-         <Route path="/MyCards" element={<MyCardz />} />
-         <Route path="/Friends" element={<Friends />} /> 
-         <Route path="/CreateCard" element={<CreateCard />} /> 
-         <Route path="/Login" element={<Login />} /> 
-       </Routes>
-       </div> 
+      <div className="nav"> 
+      <NavBar token={token} setLogin={setLogin} username={username} />
+      <Routes>
+        <Route path="/AllCards" element={<AllCardz token={token}/>} /> 
+        <Route path="/MyCards" element={<MyCardz />} />
+        <Route path="/Friends" element={<Friends />} /> 
+        <Route path="/CreateCard" element={<CreateCard />} /> 
+        <Route path="/Login" element={<Login />} /> 
+      </Routes>
+      </div> 
     ) : (
       <div> 
         <Login 
