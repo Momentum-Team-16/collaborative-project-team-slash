@@ -13,7 +13,7 @@ export const Login = ({ setLogin }) => {
         .then((res) => {
             const token = res.data.auth_token
             setLogin(token, username) 
-            navigate("/MyCards")
+            navigate("/AllCards")
         })
     }
 
