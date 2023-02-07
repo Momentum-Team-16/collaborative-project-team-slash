@@ -13,11 +13,11 @@ export const Login = ({ setLogin }) => {
         .then((res) => {
             const token = res.data.auth_token
             setLogin(token, username) 
-            navigate("/MyCards")
+            navigate("/AllCards")
         })
     }
 
-    return(
+    return (
         <> 
         <h2 className="login-intro">Welcome to Sugar Maple Social!</h2>
         <h3 className="login-add">Please Login</h3>

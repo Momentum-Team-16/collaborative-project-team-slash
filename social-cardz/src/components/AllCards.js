@@ -1,4 +1,4 @@
-import { requestAllCards, requestMyCards } from './Requests'; 
+import { requestAllCards } from './Requests'; 
 import { useEffect, useState } from 'react'; 
 import { CardDetails } from './CardDetails';
 
@@ -16,11 +16,11 @@ export const AllCardz = ({token}) => {
     return (
         <>
         <h2>Wild Maples</h2>
-        <div className="card-container">
+        <div className="card-grid">
             {cards.map(card => (
-                <section>
+                <div className="card">
                     <CardDetails card={card} key={card.id}/>
-                </section>
+                </div>
             ))}
         </div>
         </>

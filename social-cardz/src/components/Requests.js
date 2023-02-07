@@ -27,13 +27,13 @@ export const requestAllCards = (token) => {
 //     return response
 // } 
 
-// export const requestMyCards = (token) => {
-//     const url = 'https://social-cards-wg2j.onrender.com/cards/me' 
+ export const requestMyCards = (token) => {
+     const url = 'https://social-cards-wg2j.onrender.com/cards/me/' 
 
-//     const response = axios.get(url, {
-//         headers: {Authorization: `token ${token}`}
-//     })
-//     return response 
-// }
+     const response = axios.get(url, {
+         headers: {Authorization: `token ${token}`}
+     })
+     return response 
+ }
 
 

@@ -9,7 +9,7 @@ export const CardDetails = ({card}) => {
                 font: card.font,
                 text_color: card.font_color,}}>
             <div className="message">{card.front_message}</div>
-            <div className="author">{`created by ${card.user}`}</div>
+            <div className="author">{`created by ${card.owner}`}</div>
         </div>
         </div>
     )}

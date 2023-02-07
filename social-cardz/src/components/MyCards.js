@@ -1,14 +1,26 @@
 import { useEffect, useState } from 'react'; 
 import { requestMyCards } from './Requests';
+import { CardDetails } from './CardDetails'; 
 
 export const MyCardz = ({token}) => {
-    const [mine, setMine] = useState([])
+    const [cards, setCards] = useState([])
+
     useEffect(() => {
         requestMyCards(token)
-        .then(res => setMine(res.data))
+        .then(res => setCards(res.data))
     }, [token])
 
+
     return (
+        <>
         <h2>Domestic Maples</h2>
+        <div className="card-grid">
+            {cards.map(card => (
+                <div className="card">
+                    <CardDetails card={card} key={card.id}/>
+                </div>
+            ))}
+        </div>
+        </>
     )
 };
