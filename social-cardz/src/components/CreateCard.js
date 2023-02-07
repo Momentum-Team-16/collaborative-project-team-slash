@@ -51,7 +51,7 @@ export const CreateCard = ({token}) => {
                         onChange={e => setBackText(e.target.value)}></input>
                     <br/>
                     <br/>             
-                    <button className="create-button" onClick={handleCreate}>Create Card</button>
+                    <button className="create-button" onClick={handleCreate}>Turn a New Leaf</button>
         </div>
         </> 
     )
