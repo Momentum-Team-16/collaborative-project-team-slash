@@ -27,10 +27,10 @@ export const requestMyCards = (token) => {
     return response 
 }
 
-export const requestCreateCard = (token) => {
+export const requestCreateCard = (token, createCard) => {
     const url = 'https://social-cards-wg2j.onrender.com/cards/me/'
 
-    const response = axios.post(url, {
+    const response = axios.post(url, createCard, {
         headers: {Authorization: `token ${token}`}
     })
     return response 

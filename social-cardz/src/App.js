@@ -33,7 +33,7 @@ function App() {
         <Route path="/AllCards" element={<AllCardz token={token}/>} /> 
         <Route path="/MyCards" element={<MyCardz token={token} />} />
         <Route path="/Friends" element={<Friends />} /> 
-        <Route path="/CreateCard" element={<CreateCard token={token}/>} /> 
+        <Route path="/CreateCard" element={<CreateCard token={token} />} /> 
         <Route path="/Login" element={<Login />} /> 
       </Routes>
       </div> 
