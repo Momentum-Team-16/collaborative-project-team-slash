@@ -20,9 +20,9 @@ export const Login = ({ setLogin }) => {
     return (
         <> 
         <h2 className="login-intro">Welcome to Sugar Maple Social!</h2>
-        <h3 className="login-add">Please Login</h3>
 
         <form className="login">
+            <h3>Please Login</h3>
             <div className="userfield">
                 <input className="input" type="text" placeholder="username" 
                 onChange={(e) => setUsername(e.target.value)}/> 

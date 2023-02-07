@@ -2,7 +2,7 @@ export const CardDetails = ({card}) => {
 
     return (
         <div className="card-container">
-        <h3 className="card-title">{card.title}</h3>
+        <h5 className="card-title">{card.title}</h5>
         <div className="card-info"
             style={{
                 border_color: `${card.border_color}`,

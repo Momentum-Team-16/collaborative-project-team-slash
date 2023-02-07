@@ -31,9 +31,9 @@ function App() {
       <NavBar token={token} setLogin={setLogin} username={username} />
       <Routes>
         <Route path="/AllCards" element={<AllCardz token={token}/>} /> 
-        <Route path="/MyCards" element={<MyCardz token={token}/>} />
+        <Route path="/MyCards" element={<MyCardz token={token} />} />
         <Route path="/Friends" element={<Friends />} /> 
-        <Route path="/CreateCard" element={<CreateCard />} /> 
+        <Route path="/CreateCard" element={<CreateCard token={token}/>} /> 
         <Route path="/Login" element={<Login />} /> 
       </Routes>
       </div> 
