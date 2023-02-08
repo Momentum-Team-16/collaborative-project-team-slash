@@ -24,7 +24,6 @@ export const Login = ({ setLogin }) => {
         <> 
 
         <h2 className="login-intro">Welcome to Sugar Maple Social!</h2>
-        <h3 className="login-add">Please Login</h3>
         {register===false ? (
 
         <form className="login">

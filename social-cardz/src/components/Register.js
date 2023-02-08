@@ -23,6 +23,7 @@ export const Register = ({setLogin}) => {
     return (
         <div>
             <form className="register">
+            <h3>Please Register</h3>
                 <div className="userfield">
                     <input className="input" type="text" placeholder="username" 
                     onChange={(e) => setUsername(e.target.value)}/> 
@@ -31,7 +32,6 @@ export const Register = ({setLogin}) => {
                     <input className="input" type="password" placeholder="password" 
                     onChange={(e) => setPassword(e.target.value)}/>
                 </div>
-
                 <button onClick={handleSubmit}>Register</button>
             </form>
         </div>
