@@ -18,6 +18,25 @@ export const requestAllCards = (token) => {
     return response 
 }
 
+export const requestMyCards = (token) => {
+    const url = 'https://social-cards-wg2j.onrender.com/cards/me/' 
+
+    const response = axios.get(url, {
+        headers: {Authorization: `token ${token}`}
+    })
+    return response 
+}
+
+export const requestCreateCard = (token, createCard) => {
+    const url = 'https://social-cards-wg2j.onrender.com/cards/me/'
+
+    const response = axios.post(url, createCard, {
+        headers: {Authorization: `token ${token}`}
+    })
+    return response 
+}
+
+
 // export const requestACard = (token, cardId) => {
 //     const url = 'https://social-cards-wg2j.onrender.com/cards/${cardId}'
 
@@ -26,14 +45,5 @@ export const requestAllCards = (token) => {
 //     })
 //     return response
 // } 
-
- export const requestMyCards = (token) => {
-     const url = 'https://social-cards-wg2j.onrender.com/cards/me/' 
-
-     const response = axios.get(url, {
-         headers: {Authorization: `token ${token}`}
-     })
-     return response 
- }
 
 
