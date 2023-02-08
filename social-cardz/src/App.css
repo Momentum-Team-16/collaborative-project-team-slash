@@ -54,11 +54,11 @@ h2 {
   display: flex;
   justify-content: left;
   cursor: pointer;
+
 }
 
 .nav-button {
-  border: 2px#d7d80d groove;
-  background-color: #bf0505; 
+  border: 2px rgb(211, 21, 21) groove;
   color: #ffffff;
   cursor: pointer;
   font-size: medium;
@@ -71,6 +71,7 @@ h2 {
   padding: 20px; 
   display: flex;
   flex-flow: wrap;
+  justify-content: space-around;
   margin: 8px;
 }
 
@@ -88,5 +89,4 @@ h2 {
   width: 400px; 
   align-items: center; 
   background-color: #d7d80d; 
-
 }
