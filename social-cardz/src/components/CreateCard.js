@@ -81,7 +81,6 @@ export const CreateCard = ({token}) => {
                                 <button className="btn" style={{ color: 'Purple' }} onClick={() => { setColorText('Purple') }}>Purple</button>
                         </div>
                          )}
-
                     <br/> 
                     <br/>
                     <p className="front-message">Front Message</p>

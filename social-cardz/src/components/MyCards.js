@@ -3,7 +3,7 @@ import { requestMyCards } from './Requests';
 import { CardDetails } from './CardDetails'; 
 import { Delete } from './Delete'; 
 
-export const MyCardz = ({token, username}) => {
+export const MyCardz = ({token}) => {
     const [cards, setCards] = useState([])
 
     useEffect(() => {
