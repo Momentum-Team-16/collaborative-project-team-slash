@@ -31,7 +31,7 @@ export const requestCreateCard = (token, createCard) => {
 export const requestDeleteCard = (token, cardId) => {
     const url = `https://social-cards-wg2j.onrender.com/cards/${cardId}/`
 
-    const response = axios.delete(url, cardId, {
+    const response = axios.delete(url, {
         headers: {Authorization: `token ${token}`}
     })
     return response 
