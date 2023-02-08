@@ -36,6 +36,32 @@ export const requestCreateCard = (token, createCard) => {
     return response 
 }
 
+export const requestDeleteCard = (token, cardId) => {
+    const url = `https://social-cards-wg2j.onrender.com/cards/${cardId}/`
+
+    const response = axios.delete(url, cardId, {
+        headers: {Authorization: `token ${token}`}
+    })
+    return response 
+}
+
+export const requestFollowing = (token) => {
+    const url = 'https://social-cards-wg2j.onrender.com/cards/followed/'
+
+    const response = axios.get(url, {
+        headers: {Authorizaton: `token ${token}`}
+    })
+    return response 
+}
+
+export const requestFollowUser = (token) => {
+    const url = 'https://social-cards-wg2j.onrender.com/follower/'
+
+    const response = axios.post(url, {
+        headers: {Authorization: `token ${token}`}
+    })
+    return response 
+}
 
 // export const requestACard = (token, cardId) => {
 //     const url = 'https://social-cards-wg2j.onrender.com/cards/${cardId}'
