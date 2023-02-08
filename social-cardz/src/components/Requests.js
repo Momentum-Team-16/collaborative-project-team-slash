@@ -45,7 +45,16 @@ export const requestDeleteCard = (token, cardId) => {
     return response 
 }
 
-export const requestFollowing = (token) => {
+export const requestEditCard = (token, cardId) => {
+    const url = `https://social-cards-wg2j.onrender.com/cards/${cardId}/`
+
+    const response = axios.patch(url, cardId, {
+        headers: {Authorization: `token ${token}`}
+    })
+    return response
+}
+
+export const requestFollowedCards = (token) => {
     const url = 'https://social-cards-wg2j.onrender.com/cards/followed/'
 
     const response = axios.get(url, {
@@ -62,6 +71,17 @@ export const requestFollowUser = (token) => {
     })
     return response 
 }
+
+export const requestUnfollowUser = (token) => {
+    const url = 'https://social-cards-wg2j.onrender.com/unfollow/'
+
+    const response = axios.delete(url, {
+        headers: {Authorization: `token ${token}`}
+    })
+    return response 
+}
+
+
 
 // export const requestACard = (token, cardId) => {
 //     const url = 'https://social-cards-wg2j.onrender.com/cards/${cardId}'
