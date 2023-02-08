@@ -9,9 +9,11 @@ export const requestLogin = (username, password) => {
     return response 
 }
 
+
+
 export const requestAllCards = (token) => {
     const url = 'https://social-cards-wg2j.onrender.com/cards/' 
-
+    
     const response = axios.get(url, {
         headers: {Authorization: `token ${token}`}
     })
@@ -19,21 +21,33 @@ export const requestAllCards = (token) => {
 }
 
 // export const requestACard = (token, cardId) => {
-//     const url = 'https://social-cards-wg2j.onrender.com/cards/${cardId}'
-
-//         const response = axios.get(url,
-//     { headers: { Authorization: `token ${token}`}
-//     })
-//     return response
-// } 
-
- export const requestMyCards = (token) => {
-     const url = 'https://social-cards-wg2j.onrender.com/cards/me/' 
-
-     const response = axios.get(url, {
-         headers: {Authorization: `token ${token}`}
-     })
-     return response 
- }
-
-
+    //     const url = 'https://social-cards-wg2j.onrender.com/cards/${cardId}'
+    
+    //         const response = axios.get(url,
+    //     { headers: { Authorization: `token ${token}`}
+    //     })
+    //     return response
+    // } 
+    
+    export const requestMyCards = (token) => {
+        const url = 'https://social-cards-wg2j.onrender.com/cards/me/' 
+        
+        const response = axios.get(url, {
+            headers: {Authorization: `token ${token}`}
+        })
+        return response 
+    }
+    
+    export const requestFriendsCards = (token) => {
+        const url = ''
+    }
+    
+    // export const requestRegister = (username, password) => {
+    //     const url = 'https://social-cards-wg2j.onrender.com/auth/users/'
+    
+    //     const response = axios.post(url, {
+    //         username: username,
+    //         password: password})
+    //         return response
+    // }
+    
