@@ -8,6 +8,7 @@ import { Friends } from './components/Friends';
 import { AllCardz } from './components/AllCards'; 
 import { CreateCard } from './components/CreateCard'; 
 import { MyCardz } from './components/MyCards'; 
+import { Register } from './components/Register';
 import { Routes, Route } from 'react-router-dom'; 
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
         <Route path="/Friends" element={<Friends />} /> 
         <Route path="/CreateCard" element={<CreateCard token={token} />} /> 
         <Route path="/Login" element={<Login />} /> 
+        <Route path="/register" element={<Register setLogin={setLogin}/>} />
       </Routes>
       </div> 
     ) : (

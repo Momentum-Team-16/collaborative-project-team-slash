@@ -1,10 +1,13 @@
 import { useNavigate } from 'react-router-dom'; 
 import { useState } from 'react'; 
 import { requestLogin } from './Requests'; 
+import { Link } from 'react-router-dom'
+import { Register } from './Register';
 
 export const Login = ({ setLogin }) => {
     const [username, setUsername] = useState('') 
     const [password, setPassword] = useState('') 
+    const [register, setRegister] = useState(false)
     const navigate = useNavigate('') 
 
     const handleSubmit = (event) => {
@@ -19,7 +22,9 @@ export const Login = ({ setLogin }) => {
 
     return (
         <> 
+
         <h2 className="login-intro">Welcome to Sugar Maple Social!</h2>
+        {register===false ? (
 
         <form className="login">
             <h3>Please Login</h3>
@@ -33,7 +38,14 @@ export const Login = ({ setLogin }) => {
             </div>
 
             <button onClick={handleSubmit}>Login</button>
+
+            <Link to="/Register" onClick={()=> setRegister(!register)}> Register Here </Link>
+        
         </form>
+        ) : (
+            <Register />
+            )}
+        )
         </>
     )
 }
