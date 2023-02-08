@@ -4,7 +4,7 @@ import { requestCreateCard } from './Requests'
 export const CreateCard = ({token}) => {
     const [expand, setExpand] = useState(null)
     const [title, setTitle] = useState('')
-    const [borderColor, setBorderColor] = useState('Black')
+    const [colorOfBorder, setColorOfBorder] = useState('Black')
     const [deFont, setDeFont] = useState('Times New Roman')
     const [colorText, setColorText] = useState('Black')
     const [frontText, setFrontText] = useState('')
@@ -12,11 +12,10 @@ export const CreateCard = ({token}) => {
 
     let createCard = {
         "title": `${title}`,
-        "border_color": `${borderColor}`, 
+        "border_color": `${colorOfBorder}`, 
         "front_message": `${frontText}`, 
         "back_message": `${backText}`, 
         //"front_image":
-        //"back_image":
         "font": `${deFont}`, 
         "text_color": `${colorText}`,
         //"tags": 
@@ -28,7 +27,7 @@ export const CreateCard = ({token}) => {
         requestCreateCard(token, createCard)
 
         setTitle('')
-        setBorderColor('Black')
+        setColorOfBorder('Black')
         setDeFont('Times New Roman')
         setColorText('Black')
         setFrontText('')
@@ -48,12 +47,12 @@ export const CreateCard = ({token}) => {
                     <button className="bordbutt" onClick={() => { expand === 1 ? setExpand(null) : setExpand(1) }}>Leaf Border Color</button>
                     {expand === 1 && (
                     <div className="paint-bord">
-                                <button className="btn" style={{ borderWidth: '2px', borderColor: 'Black' }} onClick={() => { setBorderColor('Black') }}>Black</button>
-                                <button className="btn" style={{ borderWidth: '2px', borderColor: 'White' }} onClick={() => { setBorderColor('White') }}>White</button>
-                                <button className="btn" style={{ borderWidth: '2px', borderColor: '#1D72AA' }} onClick={() => { setBorderColor('Blue') }}>Blue</button>
-                                <button className="btn" style={{ borderWidth: '2px', borderColor: '#947600' }} onClick={() => { setBorderColor('Yellow') }}>Yellow</button>
-                                <button className="btn" style={{ borderWidth: '2px', borderColor: 'Green' }} onClick={() => { setBorderColor('Green') }}>Green</button>
-                                <button className="btn" style={{ borderWidth: '2px', borderColor: 'Purple' }} onClick={() => { setBorderColor('Purple') }}>Purple</button>
+                                <button className="btn" style={{ borderWidth: '2px', borderColor: 'black' }} onClick={() => { setColorOfBorder('Black') }}>Black</button>
+                                <button className="btn" style={{ borderWidth: '2px', borderColor: 'white' }} onClick={() => { setColorOfBorder('White') }}>White</button>
+                                <button className="btn" style={{ borderWidth: '2px', borderColor: 'blue' }} onClick={() => { setColorOfBorder('Blue') }}>Blue</button>
+                                <button className="btn" style={{ borderWidth: '2px', borderColor: 'yellow' }} onClick={() => { setColorOfBorder('Yellow') }}>Yellow</button>
+                                <button className="btn" style={{ borderWidth: '2px', borderColor: 'green' }} onClick={() => { setColorOfBorder('Green') }}>Green</button>
+                                <button className="btn" style={{ borderWidth: '2px', borderColor: 'purple' }} onClick={() => { setColorOfBorder('Purple') }}>Purple</button>
                         </div>
                          )}
                     <br/>
@@ -78,7 +77,7 @@ export const CreateCard = ({token}) => {
                                 <button className="btn" style={{ color: '#1D72AA' }} onClick={() => { setColorText('Blue') }}>Blue</button>
                                 <button className="btn" style={{ color: '#947600' }} onClick={() => { setColorText('Yellow') }}>Yellow</button>
                                 <button className="btn" style={{ color: 'Green' }} onClick={() => { setColorText('Green') }}>Green</button>
-                                <button className="btn" style={{ color: 'Purple' }} onClick={() => { setColorText('Purple') }}>Purple</button>
+                                <button className="btn" style={{ color: 'PURPLE' }} onClick={() => { setColorText('PURPLE') }}>Purple</button>
                         </div>
                          )}
                     <br/> 
@@ -97,7 +96,7 @@ export const CreateCard = ({token}) => {
         </div>
         <br/>
         <div className="leaf-models">
-            <div className="created-card" style={{border: borderColor }}> 
+            <div className="created-card" style={{borderColor: colorOfBorder}}> 
             <p style={{ textAlign: 'center', fontFamily: deFont, color: colorText,
                 padding: '10px'}}>{title}<br/><br/>{frontText}</p>
             </div>

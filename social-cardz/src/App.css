@@ -58,7 +58,7 @@ h2 {
 }
 
 .card {
-  border: 2px solid #d7d80d; 
+  border: 4px solid; 
   background-color: #b65300; 
   color: #4a1206;
   padding: 10px;
@@ -71,6 +71,7 @@ h2 {
   width: 400px; 
   align-items: center; 
   background-color: #d7d80d; 
+  border: 4px solid;
 }
 
 .erasebutt {

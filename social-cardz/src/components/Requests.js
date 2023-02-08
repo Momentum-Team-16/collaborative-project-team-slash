@@ -95,10 +95,6 @@ export const requestMyCards = (token) => {
   return response;
 };
 
-export const requestFriendsCards = (token) => {
-  const url = "";
-};
-
 // export const requestRegister = (username, password) => {
 //     const url = 'https://social-cards-wg2j.onrender.com/auth/users/'
 
