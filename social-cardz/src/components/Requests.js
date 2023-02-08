@@ -54,6 +54,15 @@ export const requestEditCard = (token, cardId) => {
     return response
 }
 
+export const requestOtherCards = (token, ownerId) => {
+    const url = `https://social-cards-wg2j.onrender.com/cards/${ownerId}/`
+
+    const response = axios.get(url, ownerId, {
+        headers: {Authorization: `token ${token}`}
+    })
+    return response 
+}
+
 export const requestFollowedCards = (token) => {
     const url = 'https://social-cards-wg2j.onrender.com/cards/followed/'
 

@@ -1,6 +1,7 @@
 import { requestAllCards } from './Requests'; 
 import { useEffect, useState } from 'react'; 
 import { CardDetails } from './CardDetails';
+import { Follow } from './Follow'; 
 
 
 export const AllCardz = ({token}) => {
@@ -20,6 +21,7 @@ export const AllCardz = ({token}) => {
             {cards.map(card => (
                 <div className="card">
                     <CardDetails card={card} key={card.id}/>
+                    <Follow card={card} ownerId={card.owner} />
                 </div>
             ))}
         </div>
