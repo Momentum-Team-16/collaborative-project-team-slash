@@ -1,11 +1,16 @@
+import { useState } from 'react';
 import { requestFollowUser, requestOtherCards } from './Requests'; 
 
-export const Follow = ({token, ownerId}) => {
+export const Follow = ({token, owner}) => {
+
+    const [ownerId, setOwnerId] = useState(null) 
 
     const followUser = () => {
-        requestOtherCards(token, ownerId)
-        .then(requestFollowUser(token, ownerId)) 
-        .then((res) => res.data)
+        requestOtherCards(token, owner)
+        .then((res) => {
+            setOwnerId(res.data.owner); 
+            ownerId && (requestFollowUser(token, ownerId))
+        })
     }
 
     const myUser = token
