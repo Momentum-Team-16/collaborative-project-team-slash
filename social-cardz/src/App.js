@@ -1,5 +1,5 @@
 import './App.css';
-import { React, useState } from 'react';
+import React from 'react';
 import moment from 'moment'; 
 import useLocalStorageState from 'use-local-storage-state'; 
 import { NavBar } from './components/NavBar';
@@ -24,7 +24,9 @@ function App() {
 
   return (
   <>
-  <p className="time">Date: {moment().format('MMMM Do YYYY, h:mm:ss a')}</p>
+  <p className="time">It's always Maple Sugar O'Clock!
+  <br/>
+   {moment().format('MMMM Do YYYY, h:mm:ss a')}</p>
     <h1>Sugar Maple Social</h1>
 
     {loggedIn ? (

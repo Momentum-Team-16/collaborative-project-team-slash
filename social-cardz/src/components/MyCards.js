@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'; 
 import { requestMyCards } from './Requests';
 import { CardDetails } from './CardDetails'; 
+import { Delete } from './Delete'; 
 
 export const MyCardz = ({token}) => {
     const [cards, setCards] = useState([])
@@ -17,7 +18,10 @@ export const MyCardz = ({token}) => {
         <div className="card-grid">
             {cards.map(card => (
                 <div className="card">
-                    <CardDetails card={card} key={card.id}/>
+                    <CardDetails card={card} key={card.id} />
+                    <div className="burn">
+                    <Delete card={card} token={token} cardId={card.id} />
+                    </div> 
                 </div>
             ))}
         </div>

@@ -28,6 +28,62 @@ export const requestCreateCard = (token, createCard) => {
   return response;
 };
 
+export const requestDeleteCard = (token, cardId) => {
+    const url = `https://social-cards-wg2j.onrender.com/cards/${cardId}/`
+
+    const response = axios.delete(url, {
+        headers: {Authorization: `token ${token}`}
+    })
+    return response 
+}
+
+export const requestEditCard = (token, cardId) => {
+    const url = `https://social-cards-wg2j.onrender.com/cards/${cardId}/`
+
+    const response = axios.patch(url, cardId, {
+        headers: {Authorization: `token ${token}`}
+    })
+    return response
+}
+
+export const requestOtherCards = (token, ownerId) => {
+    const url = `https://social-cards-wg2j.onrender.com/cards/${ownerId}/`
+
+    const response = axios.get(url,
+        {owner: ownerId}, 
+        {headers: {Authorization: `token ${token}`}
+    })
+    return response 
+}
+
+export const requestFollowUser = (token, ownerId) => {
+    const url = 'https://social-cards-wg2j.onrender.com/follower/'
+
+    const response = axios.post(url, 
+        {owner: ownerId}, 
+        {headers: {Authorization: `token ${token}`}
+    })
+    return response 
+}
+
+export const requestFollowedCards = (token) => {
+    const url = 'https://social-cards-wg2j.onrender.com/cards/followed/'
+
+    const response = axios.get(url, {
+        headers: {Authorizaton: `token ${token}`}
+    })
+    return response 
+}
+
+export const requestUnfollowUser = (token) => {
+    const url = 'https://social-cards-wg2j.onrender.com/unfollow/'
+
+    const response = axios.delete(url, {
+        headers: {Authorization: `token ${token}`}
+    })
+    return response 
+}
+
 // export const requestACard = (token, cardId) => {
 
 export const requestMyCards = (token) => {
