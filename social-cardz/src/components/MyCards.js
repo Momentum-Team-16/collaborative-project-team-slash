@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { requestMyCards } from './Requests';
 import { CardDetails } from './CardDetails'; 
 import { Delete } from './Delete'; 
+import { Edit } from './Edit'; 
 
 export const MyCardz = ({token}) => {
     const [cards, setCards] = useState([])
@@ -21,6 +22,7 @@ export const MyCardz = ({token}) => {
                     <CardDetails card={card} key={card.id} />
                     <div className="burn">
                     <Delete card={card} token={token} cardId={card.id} />
+                    <Edit token={token} cardId={card.id} />
                     </div> 
                 </div>
             ))}

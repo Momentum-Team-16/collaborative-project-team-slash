@@ -5,7 +5,7 @@ export const Delete = ({ token, cardId}) => {
     const deleteCard = () => {
 
         requestDeleteCard(token, cardId) 
-            .then((res) => res.data === '')
+            .then((res) => res.data === '' && (window.location.reload()))
     }
 
     return (
