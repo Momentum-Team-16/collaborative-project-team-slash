@@ -2,10 +2,9 @@ export const CardDetails = ({card}) => {
 
     return (
         <div className="card-container"
-        style={{
-        border: `4px ${card.border_color}`,  
+        style={{ borderColor: `${card.border_color}`,
         fontFamily: `${card.font}`, 
-        color: `${card.font_color}`}}>
+        color: `${card.text_color}`}}>
 
             <h5 className="card-title">{card.title}</h5>
             <div className="front-card">
@@ -19,5 +18,6 @@ export const CardDetails = ({card}) => {
             <div className="author">{`created by ${card.owner}`}</div>
         </div>
         </div>
-    )}
+    )
+}
     
