@@ -10,6 +10,6 @@ export const Unfollow = ({ token, ownerId}) => {
     }
 
     return (
-        <button className="erasebutt" onClick={unfollowUser}>Dump Leafbag</button>
+        <button className="erasebutt" onClick={unfollowUser}>Dump Leafbag?</button>
     )
 }
