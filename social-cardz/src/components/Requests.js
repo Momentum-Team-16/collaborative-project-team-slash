@@ -74,8 +74,8 @@ export const requestFollowedCards = (token) => {
     return response 
 }
 
-export const requestUnfollowUser = (token) => {
-    const url = 'https://social-cards-wg2j.onrender.com/unfollow/'
+export const requestUnfollowUser = (token, ownerId) => {
+    const url = `https://social-cards-wg2j.onrender.com/unfollow/${ownerId}/`
 
     const response = axios.delete(url, {
         headers: {Authorization: `token ${token}`}

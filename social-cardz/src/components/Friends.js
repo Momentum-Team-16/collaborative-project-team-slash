@@ -1,6 +1,7 @@
 import { requestFollowedCards } from './Requests'; 
 import { useState, useEffect } from 'react'; 
 import { CardDetails } from './CardDetails'; 
+import { Unfollow } from "./Unfollow";
 
 
 export const Friends = ({token}) => {
@@ -20,6 +21,7 @@ export const Friends = ({token}) => {
             {fwiends.map(card => (
                 <div className="card">
                     <CardDetails token={token} card={card} key={card.id}/>
+                    <Unfollow token={token} ownerId={card.owner} />
                 </div>
             ))}
         </div>
