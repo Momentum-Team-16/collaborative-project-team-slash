@@ -9,6 +9,11 @@ export const CreateCard = ({token}) => {
     const [colorText, setColorText] = useState('Black')
     const [frontText, setFrontText] = useState('')
     const [backText, setBackText] = useState('')
+    const [front, setFront] = useState(true)
+
+    const cardFlip = (e) => {
+        setFront(!front)
+    }
 
     let createCard = {
         "title": `${title}`,
@@ -39,7 +44,10 @@ export const CreateCard = ({token}) => {
         <>
         <h2>Maple Leaf Buds</h2>
         <div className="createcard-box">
-        <p>Title</p>
+        <button className="flipper2" onClick={cardFlip}>Flip Me</button>
+        <br/>
+        <br/>
+        <p><strong>Title</strong></p>
                 <input className="title-box" type='text' value={title}
                     onChange={e => setTitle(e.target.value)}></input>
                     <br/>  
@@ -81,11 +89,11 @@ export const CreateCard = ({token}) => {
                         </div>
                          )}
                     <br/> 
-                    <br/>
-                    <p className="front-message">Front Message</p>
+                    <br/>        
+                    <p className="front-message"><strong>Front Message</strong></p>
                     <input className="fronttext-box" type='text' value={frontText} 
                         onChange={e => setFrontText(e.target.value)}></input>
-                    <p className="back-message">Back Message</p>
+                    <p className="back-message"><strong>Back Message</strong></p>
                     <input className="backtext-box" type='text' value={backText}
                         onChange={e => setBackText(e.target.value)}></input>
                     <br/>
