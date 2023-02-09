@@ -56,20 +56,12 @@ export const requestOtherCards = (token, ownerId) => {
     return response 
 }
 
-export const requestFollowUser = (token, ownerId) => {
-    const url = `https://social-cards-wg2j.onrender.com/follower/${ownerId}`
-
-    const response = axios.post(url, {
-        headers: {Authorization: `token ${token}`}
-    })
-    return response 
-}
 
 export const requestFollowedCards = (token) => {
-    const url = 'https://social-cards-wg2j.onrender.com/cards/followed/'
+  const url = 'https://social-cards-wg2j.onrender.com/cards/followed/'
 
     const response = axios.get(url, {
-        headers: {Authorizaton: `token ${token}`}
+      headers: {Authorizaton: `token ${token}`}
     })
     return response 
 }
@@ -91,3 +83,13 @@ export const requestMyCards = (token) => {
   });
   return response;
 };
+
+
+export const requestFollowUser = (token, ownerId) => {
+    const url = `https://social-cards-wg2j.onrender.com/follower/${ownerId}`
+
+    const response = axios.post(url, {
+        headers: {Authorization: `token ${token}`}
+    })
+    return response 
+}
