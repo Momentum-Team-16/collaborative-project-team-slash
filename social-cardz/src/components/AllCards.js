@@ -21,7 +21,7 @@ export const AllCardz = ({token}) => {
             {cards.map(card => (
                 <div className="card">
                     <CardDetails card={card} key={card.id}/>
-                    <Follow card={card} ownerId={card.owner} />
+                    <Follow token={token} ownerId={card.owner} />
                 </div>
             ))}
         </div>
