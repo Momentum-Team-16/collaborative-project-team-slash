@@ -64,8 +64,6 @@ h2 {
   padding: 10px;
   margin: 1em; 
   display: flex; 
-  height: 300px;
-  width: 250px;
 }
 
 .card-container {
@@ -90,4 +88,10 @@ h2 {
   height: 40px;
   font-size: 10px;
   margin: 15px;
+}
+
+.flipper {
+  border: 1px solid #c1a716;
+  background-color: #b81818;
+  color: #ddab3f;
 }

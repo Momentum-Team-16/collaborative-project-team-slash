@@ -5,6 +5,7 @@ export const Edit = ({ token, cardId}) => {
 
     const editCard = () => {
         requestEditCard(token, cardId) 
+        .then(res => res.data)
     }
 
     return (

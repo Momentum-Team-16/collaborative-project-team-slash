@@ -57,11 +57,10 @@ export const requestOtherCards = (token, ownerId) => {
 }
 
 export const requestFollowUser = (token, ownerId) => {
-    const url = 'https://social-cards-wg2j.onrender.com/follower/'
+    const url = `https://social-cards-wg2j.onrender.com/follower/${ownerId}`
 
-    const response = axios.post(url, 
-        {owner: ownerId}, 
-        {headers: {Authorization: `token ${token}`}
+    const response = axios.post(url, {
+        headers: {Authorization: `token ${token}`}
     })
     return response 
 }

@@ -5,12 +5,15 @@ Welcome to my SPA, Sugar Maple Social!
 
 Netlify Link: https://silver-alpaca-1ac02f.netlify.app/
 
+# Required Commands for Running SPA Locally 
 
+npm install
+npm install axios 
+npm install moment.js 
 
-
-
-
-
+Username: superuser
+Password: superuser
+Authorization token: 7f9d1ca5d3dc8179a6b3f901a68380980dab750a (prefix: token)
 
 
 # Getting Started with Create React App
