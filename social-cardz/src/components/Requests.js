@@ -40,7 +40,7 @@ export const requestDeleteCard = (token, cardId) => {
 export const requestEditCard = (token, cardId) => {
     const url = `https://social-cards-wg2j.onrender.com/cards/${cardId}/`
 
-    const response = axios.patch(url, cardId, {
+    const response = axios.patch(url, {
         headers: {Authorization: `token ${token}`}
     })
     return response
@@ -84,8 +84,6 @@ export const requestUnfollowUser = (token) => {
     return response 
 }
 
-// export const requestACard = (token, cardId) => {
-
 export const requestMyCards = (token) => {
   const url = "https://social-cards-wg2j.onrender.com/cards/me/";
 
@@ -94,16 +92,3 @@ export const requestMyCards = (token) => {
   });
   return response;
 };
-
-export const requestFriendsCards = (token) => {
-  const url = "";
-};
-
-// export const requestRegister = (username, password) => {
-//     const url = 'https://social-cards-wg2j.onrender.com/auth/users/'
-
-//     const response = axios.post(url, {
-//         username: username,
-//         password: password})
-//         return response
-// }
