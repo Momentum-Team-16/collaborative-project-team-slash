@@ -1,17 +1,12 @@
 import { useState } from 'react';
-import { requestFollowUser, requestOtherCards } from './Requests'; 
+import { requestFollowUser } from './Requests'; 
+import { useNavigate } from 'react-router-dom'; 
 
 export const Follow = ({token, ownerId}) => {
 
-    const [owner, setOwner] = useState(null)
-
     const followUser = () => {
-        requestOtherCards(token, ownerId)
-        .then((res) => {
-            setOwner(res.data.owner); 
-            owner && (requestFollowUser(token, ownerId))
-            console.log('followed')
-        })
+        requestFollowUser(token, ownerId)
+        .then((res) => console.log('you clicked me!'))
     }
 
     return (
