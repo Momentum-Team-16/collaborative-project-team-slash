@@ -27,23 +27,3 @@ export const Friends = ({token}) => {
     )
 
 } 
-
-/* export const Follow = ({token, ownerId}) => {
-
-    const [fwiends, setFwiends] = useState([])
-
-    const showFwiends = () => {
-        requestFollowUser(token, ownerId)
-        .then((res) => {
-            setFwiends(res.data); 
-            fwiends && (requestFollowedCards(token))
-            console.log('followed')
-        })
-    }
-
-    return (
-        <div className="follow">
-        <button onClick={showFwiends}>Catch Leafbag</button>
-        </div> 
-    )
-} */ 
