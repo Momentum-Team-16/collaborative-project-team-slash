@@ -3,7 +3,7 @@
 
 Welcome to my SPA, Sugar Maple Social! 
 Sugar Maple Social is an e-cards website thematically centered around the beautiful state tree of New York, the Sugar Maple. 
-Since we are coming upon the time where the Sugar Maples will be tapped for Maple Syrup, this felt like a fitting February theme to sweep in some much-needed Spring Morale. 
+Since we are coming upon the time where the Sugar Maples will be tapped for Maple Syrup, this felt like a fitting February theme to sweep in some needed Spring Morale. 
 
 ### Netlify Link: https://silver-alpaca-1ac02f.netlify.app/
 
