@@ -11,11 +11,13 @@ Since we are coming upon the time where the Sugar Maples will be tapped for Mapl
 
 * Create a local repository. 
 * Clone project from GitHub within your terminal, using the command: `git clone <remoteRepo>`
---Link: https://github.com/Momentum-Team-16/collaborative-project-team-slash
+# GitHub Project Link: https://github.com/Momentum-Team-16/collaborative-project-team-slash
 * Within local repository, enter this command in the terminal: `cd social-cardz` 
 * Once in social-cardz, run the following commands: 
 ### `npm install`
 ### `npm install moment.js` (for the time-keeping ticker)
+* Finally, to run the project on a local server, type in the terminal command below within social-cardz:
+### `npm run start` 
 
 Congratulations, fellow developers. My project now runs on your local repository.
 
