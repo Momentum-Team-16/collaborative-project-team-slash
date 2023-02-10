@@ -2,18 +2,24 @@
 
 
 Welcome to my SPA, Sugar Maple Social! 
+Sugar Maple Social is an e-cards website thematically centered around the beautiful state tree of New York, the Sugar Maple. 
+Since we are coming upon the time where the Sugar Maples will be tapped for Maple Syrup, this felt like a fitting February theme to sweep in some much-needed Spring Morale. 
 
-Netlify Link: https://silver-alpaca-1ac02f.netlify.app/
+### Netlify Link: https://silver-alpaca-1ac02f.netlify.app/
 
 # Required Commands for Running SPA Locally 
 
-npm install
-npm install axios 
-npm install moment.js 
+* Create a local repository. 
+* Clone project from GitHub within your terminal, using the command: `git clone <remoteRepo>`
+--Link: https://github.com/Momentum-Team-16/collaborative-project-team-slash
+* Within local repository, enter this command in the terminal: `cd social-cardz` 
+* Once in social-cardz, run the following commands: 
+### `npm install`
+### `npm install moment.js` (for the time-keeping ticker)
 
-Username: superuser
-Password: superuser
-Authorization token: 7f9d1ca5d3dc8179a6b3f901a68380980dab750a (prefix: token)
+Congratulations, fellow developers. My project now runs on your local repository.
+
+This calls for a celebration. Virtual sparkling grape juices abound. 
 
 
 # Getting Started with Create React App

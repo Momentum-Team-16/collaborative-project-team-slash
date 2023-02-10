@@ -37,6 +37,15 @@ export const requestDeleteCard = (token, cardId) => {
     return response 
 }
 
+export const requestSingleCard = (token, cardId) => {
+  const url = `https://social-cards-wg2j.onrender.com/cards/${cardId}/`
+
+  const response = axios.get(url, {
+    headers: {Authorization: `token ${token}`}
+  })
+  return response 
+}
+
 export const requestEditCard = (token, cardId) => {
     const url = `https://social-cards-wg2j.onrender.com/cards/${cardId}/`
 
