@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import axios from 'axios'; 
 
-const handleLogout = (token, setLogin) => {
+export const handleLogout = (token, setLogin) => {
     axios
     .post('https://social-cards-wg2j.onrender.con/auth/token/logout',
     { headers: {Authorization: `Token ${token}`, }, })

@@ -46,26 +46,10 @@ export const requestSingleCard = (token, cardId) => {
   return response 
 }
 
-/* export const requestEditCard = (token, cardId) => {
-    const url = `https://social-cards-wg2j.onrender.com/cards/${cardId}/`
-
-    const response = axios.patch(url, {
-      title: `${title}`, 
-      front_message: `${frontText}`,
-      back_message: `${backText}`,
-      text_color: `${colorText}`,
-      border_color: `${colorOfBorder}`,
-      font: `${deFont}`,
-    }, {
-        headers: {Authorization: `token ${token}`}
-    })
-    return response
-} */ 
-
 export const requestFollowUser = (token, ownerId) => {
     const url = `https://social-cards-wg2j.onrender.com/follower/${ownerId}/`
 
-    const response = axios.post(url, {
+    const response = axios.post(url, {}, {
         headers: {Authorization: `token ${token}`}
     })
     return response 

@@ -1,6 +1,4 @@
-import { requestSingleCard } from './Requests';
-import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useState } from 'react';
 import axios from 'axios'; 
 
 
@@ -14,35 +12,6 @@ export const Edit = ({ token, cardId }) => {
     const [colorText, setColorText] = useState(null)
     const [frontText, setFrontText] = useState('')
     const [backText, setBackText] = useState('')
-    const [front, setFront] = useState(true)
-
-
-     /* useEffect(() => {
-        requestSingleCard(token, cardId)
-        .then((res) =>{ 
-            setFrontText(res.data.front_message)
-            setColorText(res.data.text_color)
-            setDeFont(res.data.text_font)
-            setColorOfBorder(res.data.border_color)   
-        })
-    }) */ 
-
-
-    const handleClick = (e) => {
-        requestSingleCard(token, cardId)
-            .then((res) =>
-                setEditor(!editor)
-            );
-    }
-
-    let editCard = {
-        "title": `${title}`,
-        "border_color": `${colorOfBorder}`,
-        "front_message": `${frontText}`,
-        "back_message": `${backText}`,
-        "font": `${deFont}`,
-        "text_color": `${colorText}`,
-    }
 
     const requestEditCard = (token, cardId) => {
         const url = `https://social-cards-wg2j.onrender.com/cards/${cardId}/`
@@ -78,8 +47,8 @@ export const Edit = ({ token, cardId }) => {
 
     return (
         <>
-            <button onClick={handleClick}>Rearrange Leaf</button>
-            {handleClick ? (
+            <button onClick={() => { editor === 1 ? setEditor(null) : setEditor(1) }}>Rearrange Leaf</button>
+            {editor === 1 && (
             <div className="edit-box">
                         <p><strong>Title</strong></p>
                 <input className="title-box" type='text' value={title}
@@ -136,12 +105,9 @@ export const Edit = ({ token, cardId }) => {
                     <br/>         
                     <button className="edit-button" onClick={handleCreate}>Trace Leaf</button>
             </div>
-            ) : (
-                <div>
-                    <editor />
-                    <p>Check out my button</p>
+            )} 
+                <div>            
                 </div>
-            )}
         </>
     );
 }
