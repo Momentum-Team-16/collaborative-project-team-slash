@@ -4,7 +4,6 @@ export const Follow = ({token, ownerId}) => {
 
     const followUser = () => {
         requestFollowUser(token, ownerId)
-        .then((res) => console.log('you clicked me!'))
     }
 
     return (
@@ -13,3 +12,4 @@ export const Follow = ({token, ownerId}) => {
         </div> 
     )
 }
+
