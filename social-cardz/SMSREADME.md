@@ -3,15 +3,15 @@
 
 Welcome to my SPA, Sugar Maple Social! 
 Sugar Maple Social is an e-cards website thematically centered around the beautiful state tree of New York, the Sugar Maple. 
-Since we are coming upon the time where the Sugar Maples will be tapped for Maple Syrup, this felt like a fitting February theme to sweep in some much-needed Spring Morale. 
+Since we are coming upon the time when the Sugar Maples will be tapped for Maple Syrup, this felt like a fitting February theme to sweep in some much-needed Spring Morale. 
 
-### Netlify Link: https://silver-alpaca-1ac02f.netlify.app/
+# Netlify Link: https://silver-alpaca-1ac02f.netlify.app/
 
 # Required Commands for Running SPA Locally 
 
 * Create a local repository. 
 * Clone project from GitHub within your terminal, using the command: `git clone <remoteRepo>`
-# GitHub Project Link: https://github.com/Momentum-Team-16/collaborative-project-team-slash
+## GitHub Project Link: https://github.com/Momentum-Team-16/collaborative-project-team-slash
 * Within local repository, enter this command in the terminal: `cd social-cardz` 
 * Once in social-cardz, run the following commands: 
 ### `npm install`
