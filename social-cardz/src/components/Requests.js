@@ -37,23 +37,13 @@ export const requestDeleteCard = (token, cardId) => {
     return response 
 }
 
-export const requestEditCard = (token, cardId) => {
-    const url = `https://social-cards-wg2j.onrender.com/cards/${cardId}/`
+export const requestSingleCard = (token, cardId) => {
+  const url = `https://social-cards-wg2j.onrender.com/cards/${cardId}/`
 
-    const response = axios.patch(url, {
-        headers: {Authorization: `token ${token}`}
-    })
-    return response
-}
-
-export const requestOtherCards = (token, ownerId) => {
-    const url = `https://social-cards-wg2j.onrender.com/cards/${ownerId}/`
-
-    const response = axios.get(url,
-        {owner: ownerId}, 
-        {headers: {Authorization: `token ${token}`}
-    })
-    return response 
+  const response = axios.get(url, {
+    headers: {Authorization: `token ${token}`}
+  })
+  return response 
 }
 
 export const requestFollowUser = (token, ownerId) => {

@@ -40,12 +40,10 @@ export const Login = ({ setLogin }) => {
             <button onClick={handleSubmit}>Login</button>
 
             <button><Link to="/Register" onClick={()=> setRegister(!register)}> Register Here </Link></button>
-        
         </form>
         ) : (
             <Register />
             )}
-        )
         </>
     )
 }
